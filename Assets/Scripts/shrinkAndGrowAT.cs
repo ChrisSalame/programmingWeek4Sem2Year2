@@ -16,9 +16,6 @@ namespace NodeCanvas.Tasks.Actions {
         Vector3 smallSize = new Vector3(0.5f, 0.5f, 0.5f);
 
         protected override string OnInit() {
-
-
-            agent.transform.localScale = Vector3.Lerp(baseSize,smallSize, 8);
             return null;
 		}
 
@@ -27,10 +24,8 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 
+            agent.transform.localScale = Vector3.Lerp(baseSize, smallSize, 0.25f);
 
-            //agent.transform.localScale = new Vector3.Lerp(baseSize, smallSize, 2);
-            
-			EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
