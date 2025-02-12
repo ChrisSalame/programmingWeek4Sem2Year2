@@ -29,8 +29,8 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
 
-            Blackboard energyBlackboard = agent.GetComponent<Blackboard>();
-            energy = agentBlackboard.GetVeriableValue<float>("energy");
+            Blackboard agentBlackboard = agent.GetComponent<Blackboard>();
+            //energy = agentBlackboard.GetVeriableValue<float>("energy");
             
             
 
