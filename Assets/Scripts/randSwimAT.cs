@@ -32,6 +32,7 @@ namespace NodeCanvas.Tasks.Actions {
             Blackboard energyBlackboard = agent.GetComponent<Blackboard>();
             energy = agentBlackboard.GetVeriableValue<float>("energy");
             
+            
 
             Vector3 swimTarget = Random.insideUnitSphere * searchRadius + agent.transform.position;
             NavMeshHit navMeshHit;
