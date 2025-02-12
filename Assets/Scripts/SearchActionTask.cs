@@ -36,7 +36,7 @@ namespace NodeCanvas.Tasks.Actions{
 
 			if (navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance) 
 			{
-			
+				EndAction(true);
 			
 			}
            
