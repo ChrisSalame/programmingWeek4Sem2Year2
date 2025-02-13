@@ -49,9 +49,9 @@ namespace NodeCanvas.Tasks.Actions {
 
             energy.value -= energyUsage.value * Time.deltaTime;
 
-            if (navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
+            if (navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance + 1)
             {
-                EndAction(true);
+                Vector3 swimTarget = Random.insideUnitSphere * searchRadius + agent.transform.position;
 
             }
 
