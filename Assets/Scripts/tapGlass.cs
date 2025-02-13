@@ -1,14 +1,12 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 namespace NodeCanvas.Tasks.Conditions {
 
-	public class waitCT : ConditionTask {
-
-		public float waitTimer;
-		private float resetTimer;
+	public class tapGlass : ConditionTask {
 
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
@@ -18,8 +16,8 @@ namespace NodeCanvas.Tasks.Conditions {
 
 		//Called whenever the condition gets enabled.
 		protected override void OnEnable() {
-            resetTimer = waitTimer;
-        }
+			
+		}
 
 		//Called whenever the condition gets disabled.
 		protected override void OnDisable() {
@@ -29,13 +27,14 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-            resetTimer -= Time.deltaTime;
-            if (resetTimer <= 0)
+
+            Debug.Log(" Fishbowls gets tabbed");
+            if (Input.GetKeyDown("space"))
             {
                 return true;
             }
-            else 
-				return false;
-        }
+            else
+                return false;
+		}
 	}
 }
