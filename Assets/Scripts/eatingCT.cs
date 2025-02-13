@@ -32,7 +32,7 @@ namespace NodeCanvas.Tasks.Conditions {
             if (energy.value < 90)
             {
                 Debug.Log("puffer Fish Eats");
-                energy.value += 10f;
+                energy.value += 25f;
                 return true;
             }
             else

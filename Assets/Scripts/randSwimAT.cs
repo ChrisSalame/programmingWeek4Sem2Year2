@@ -14,12 +14,15 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<float> energy;
         public BBParameter<float> energyUsage;
 
+        Vector3 finalDestination;
+
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
 
 
             navAgent = agent.GetComponent<NavMeshAgent>();
+            Blackboard agentBlackboard = agent.GetComponent<Blackboard>();
 
             return null;
 		}
@@ -27,21 +30,17 @@ namespace NodeCanvas.Tasks.Actions {
 		//This is called once each time the task is enabled.
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
-		protected override void OnExecute() {
+		protected override void OnExecute() {   
 
-            Blackboard agentBlackboard = agent.GetComponent<Blackboard>();
-            //energy = agentBlackboard.GetVeriableValue<float>("energy");
-            
-            
+            Vector3 swimTarget = Random.insideUnitSphere * searchRadius;
+            swimTarget += agent.transform.position;
 
-            Vector3 swimTarget = Random.insideUnitSphere * searchRadius + agent.transform.position;
-            NavMeshHit navMeshHit;
-            if (!NavMesh.SamplePosition (swimTarget, out navMeshHit, searchRadius, NavMesh.AllAreas))
-            {
-                return;
-            }
+            NavMeshHit hit;
 
-            navAgent.SetDestination(navMeshHit.position);
+            NavMesh.SamplePosition(swimTarget, out hit, searchRadius, 1);
+            finalDestination = hit.position;
+
+            navAgent.SetDestination(hit.position);
         }
 
 		//Called once per frame while the action is active.
@@ -49,10 +48,9 @@ namespace NodeCanvas.Tasks.Actions {
 
             energy.value -= energyUsage.value * Time.deltaTime;
 
-            if (navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance + 1)
+            if (Vector3.Distance(agent.transform.position, finalDestination) < 1f)
             {
-                Vector3 swimTarget = Random.insideUnitSphere * searchRadius + agent.transform.position;
-
+                EndAction(true);
             }
 
         }

@@ -164,16 +164,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"searchRadius":20.0,"energy":{"_name":"energy","_targetVariableID":"556eeb2e-a69a-4a40-8d3a-4e922e69bfd2"},"energyUsage":{"_name":"energyUsage","_targetVariableID":"bb56a736-dc1a-4b03-bb17-00a27723e8bb"},"$type":"NodeCanvas.Tasks.Actions.randSwimAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Swim","_position":{"x":751.0,"y":301.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"eating","_position":{"x":938.6093,"y":412.1174},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"energy":{"_name":"energy","_targetVariableID":"556eeb2e-a69a-4a40-8d3a-4e922e69bfd2"},"agentBlackbord":1,"$type":"NodeCanvas.Tasks.Conditions.eatingCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_position":{"x":615.5349,"y":401.3488},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"audioClip":{"_value":2},"$type":"NodeCanvas.Tasks.Actions.PlayAudioAtPosition"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"eating","_position":{"x":783.4522,"y":582.2546},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"energy":{"_name":"energy","_targetVariableID":"556eeb2e-a69a-4a40-8d3a-4e922e69bfd2"},"$type":"NodeCanvas.Tasks.Conditions.eatingCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
-  - {fileID: 101482959}
+  - {fileID: 11400000, guid: 252469aaae9eb2e419ef63b348872bcf, type: 2}
+  - {fileID: 8300000, guid: a828a00f3a536304e94a2cad08355f2b, type: 3}
   _boundGraphSource:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: -402, y: -33}
-    _zoomFactor: 0.99978966
+    _translation: {x: -222, y: -148}
+    _zoomFactor: 0.9991309
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
