@@ -14,6 +14,8 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<float> energy;
         public BBParameter<float> energyUsage;
 
+        public BBParameter<float> eatingCooldown;
+
         Vector3 finalDestination;
 
         //Use for initialization. This is called only once in the lifetime of the task.
@@ -47,6 +49,7 @@ namespace NodeCanvas.Tasks.Actions {
 		protected override void OnUpdate() {
 
             energy.value -= energyUsage.value * Time.deltaTime;
+            eatingCooldown.value -= energyUsage.value * Time.deltaTime;
 
             if (Vector3.Distance(agent.transform.position, finalDestination) < 1f)
             {

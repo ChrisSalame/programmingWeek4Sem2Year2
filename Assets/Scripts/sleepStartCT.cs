@@ -30,10 +30,10 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-            if (energy.value < 95)
+            if (energy.value < 20)
             {
                 Debug.Log("sleep");
-                energy.value += 40f;
+                energy.value += 60f;
                 return true;
             }
             else

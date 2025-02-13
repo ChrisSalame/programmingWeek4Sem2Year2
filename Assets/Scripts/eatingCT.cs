@@ -11,6 +11,8 @@ namespace NodeCanvas.Tasks.Conditions {
         public BBParameter<float> energy;
 		public Blackboard agentBlackbord;
 
+        public BBParameter<float> eatingCooldown;
+
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit(){
@@ -29,10 +31,11 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
 
-            if (energy.value < 90)
+            if (energy.value < 90 && eatingCooldown.value <=0 )
             {
                 Debug.Log("puffer Fish Eats");
-                energy.value += 25f;
+                energy.value += 15f;
+                eatingCooldown.value = 60;
                 return true;
             }
             else
