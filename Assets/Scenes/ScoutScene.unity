@@ -168,19 +168,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_position":{"x":615.5349,"y":401.3488},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"eating","_position":{"x":797.4338,"y":586.5872},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_nestedFSM":{"_value":2},"_position":{"x":414.6027,"y":538.48},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"audioClip":{"_value":3},"$type":"NodeCanvas.Tasks.Actions.PlayAudioAtPosition"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Sleep","_position":{"x":799.3477,"y":254.1784},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_condition":{"energy":{"_name":"energy","_targetVariableID":"556eeb2e-a69a-4a40-8d3a-4e922e69bfd2"},"agentBlackbord":4,"eatingCooldown":{"_name":"eatingCooldown","_targetVariableID":"d181ed76-8f4e-4175-96a9-3dd1f4e5becc"},"$type":"NodeCanvas.Tasks.Conditions.eatingCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.tapGlass"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"energy","_targetVariableID":"556eeb2e-a69a-4a40-8d3a-4e922e69bfd2"},"agentBlackbord":4,"$type":"NodeCanvas.Tasks.Conditions.sleepStartCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"waitTimer":3.0,"$type":"NodeCanvas.Tasks.Conditions.waitCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"waitTimer":20.0,"$type":"NodeCanvas.Tasks.Conditions.waitCT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"waitTimer":30.0,"$type":"NodeCanvas.Tasks.Conditions.waitCT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_position":{"x":615.5349,"y":401.3488},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"sFxName":"eating","$type":"NodeCanvas.Tasks.Actions.PlaySoundAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"eating","_position":{"x":800.8163,"y":586.5872},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_nestedFSM":{"_value":2},"_position":{"x":415.9359,"y":538.48},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"},{"_actionList":{"executionMode":1,"actions":[{"sFxName":"sleep","$type":"NodeCanvas.Tasks.Actions.PlaySoundAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Sleep","_position":{"x":799.3477,"y":254.1784},"$type":"NodeCanvas.StateMachines.ActionState","$id":"3"}],"connections":[{"_condition":{"energy":{"_name":"energy","_targetVariableID":"556eeb2e-a69a-4a40-8d3a-4e922e69bfd2"},"agentBlackbord":3,"eatingCooldown":{"_name":"eatingCooldown","_targetVariableID":"d181ed76-8f4e-4175-96a9-3dd1f4e5becc"},"$type":"NodeCanvas.Tasks.Conditions.eatingCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"$type":"NodeCanvas.Tasks.Conditions.tapGlass"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"energy","_targetVariableID":"556eeb2e-a69a-4a40-8d3a-4e922e69bfd2"},"agentBlackbord":3,"$type":"NodeCanvas.Tasks.Conditions.sleepStartCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"waitTimer":3.0,"$type":"NodeCanvas.Tasks.Conditions.waitCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"waitTimer":20.0,"$type":"NodeCanvas.Tasks.Conditions.waitCT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"waitTimer":30.0,"$type":"NodeCanvas.Tasks.Conditions.waitCT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: 252469aaae9eb2e419ef63b348872bcf, type: 2}
   - {fileID: 11400000, guid: 708c5a7610a430f41bcf7a46c422db84, type: 2}
-  - {fileID: 8300000, guid: 22dffc766927a784b9c76ded51262c0f, type: 3}
   - {fileID: 101482959}
   _boundGraphSource:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: -272, y: -199}
-    _zoomFactor: 1
+    _translation: {x: -179.83449, y: -13.296075}
+    _zoomFactor: 0.7500946
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -326,6 +325,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3db2e01f5815dd429bb4887f9865ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultMasterVolume: 100
+  defaultEffectsVolume: 100
+  sounds:
+  - name: eating
+    clip: {fileID: 8300000, guid: a828a00f3a536304e94a2cad08355f2b, type: 3}
+    volume: 1
+    pitch: 1
+    looping: 0
+    source: {fileID: 0}
+    type: 0
+  - name: sleep
+    clip: {fileID: 8300000, guid: 22dffc766927a784b9c76ded51262c0f, type: 3}
+    volume: 1
+    pitch: 1
+    looping: 0
+    source: {fileID: 0}
+    type: 0
 --- !u!4 &302428687
 Transform:
   m_ObjectHideFlags: 0
